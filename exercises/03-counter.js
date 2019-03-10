@@ -6,6 +6,12 @@
  * counter() -> `you called me 3 times`
  */
 
-const counter = () => {};
+const counter = (() => {
+  let n = 0;
+  return () => {
+    n += 1;
+    return `you called me ${n} time${n > 1 ? 's' : ''}`;
+  }
+})();
 
 module.exports = counter;

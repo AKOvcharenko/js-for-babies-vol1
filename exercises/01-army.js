@@ -11,6 +11,13 @@
 
 const makeArmy = () => {
 
+  var solders = [];
+
+  for (let i = 0; i < 10; i++) {
+    solders.push(() => `my number is ${i}`);
+  }
+
+  return solders;
 };
 
 

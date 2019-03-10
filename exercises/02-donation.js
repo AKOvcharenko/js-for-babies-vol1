@@ -6,7 +6,21 @@
  */
 
 const getDonation = () => {
+  let donated = 0;
+  while (donated < 100) {
 
+    let donation = prompt('Donate please', 10);
+
+    if (donation) {
+      if (donation.toLowerCase().includes('get out')) break;
+      if(+donation) {
+        donated += +donation;
+      }
+    }
+
+  }
+  const phrase = donated ? `Thank You for Your donation $${donated}` : 'Sorry for disturbing, miser';
+  alert(phrase);
 };
 
 window.addEventListener("load", getDonation);
